@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login As - Campus Placement Hub</title>
+    <!-- We will use your existing stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="education.png">
+</head>
+<body class="login-page-body">
+<!-- This div creates the blurred background effect consistent with your design -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="login-container">
+    <!-- This is the main white card -->
+    <div class="login-box">
+        
+        <div class="icon-container admin" style="margin-bottom: 1rem;">
+            <i class="fas fa-sign-in-alt"></i>
+        </div>
+        
+        <h2>Login As</h2>
+        <p>Please select your role to continue.</p>
+
+            <!-- Standard link for Student -->
+            <a href="student_login.php" class="btn-option">
+                <i class="fas fa-graduation-cap"></i> Student
+            </a>
+
+            <!-- CORRECTED LINK: Points to staff_login.php for Admin -->
+            <a href="staff_login.php" class="btn-option">
+                <i class="fas fa-user-shield"></i> Admin
+            </a>
+
+            <a href="mainpage.html" class="back-link">⇦ Go Back to Homepage</a>
+        </div>
+
+        
+    </div>
+</div>

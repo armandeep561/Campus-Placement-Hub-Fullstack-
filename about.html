@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Developer - Campus Placement Hub</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="education.png">
+    
+    <style>
+        body, html { height: 100%; overflow: hidden; }
+        .about-page-container { display: grid; grid-template-columns: 40% 60%; height: 100vh; width: 100%; }
+
+        .about-hero-panel {
+            background-color: #1a1a1a; color: #fff; display: flex; flex-direction: column;
+            justify-content: center; padding: 4rem; position: relative; overflow: hidden;
+        }
+        .about-hero-panel::before {
+            content: ''; position: absolute; top: -20%; left: -50%; width: 120%; height: 120%;
+            background: linear-gradient(45deg, var(--primary-color), transparent 70%);
+            transform: rotate(-15deg); opacity: 0.3;
+        }
+        .about-hero-panel h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; position: relative; z-index: 1; }
+        .about-hero-panel p { font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); max-width: 400px; position: relative; z-index: 1; }
+
+        .about-details-panel {
+            background-color: var(--bg-light); display: flex; justify-content: center;
+            align-items: center; padding: 2rem;
+        }
+        .details-card {
+            background-color: var(--bg-white); border-radius: var(--radius); box-shadow: var(--shadow);
+            width: 100%; max-width: 450px; padding: 3rem; text-align: center;
+        }
+        .avatar {
+            width: 120px; height: 120px; border-radius: 50%; background-color: var(--primary-color);
+            color: var(--bg-white); display: flex; justify-content: center; align-items: center;
+            font-size: 3rem; font-weight: 600; margin: 0 auto 1.5rem auto; border: 5px solid var(--bg-white);
+            box-shadow: 0 0 0 5px var(--primary-color);
+        }
+        .details-card h2 { margin: 0; font-size: 2rem; color: var(--text-dark); }
+        .details-card .title { margin: 0 0 2rem 0; font-size: 1.1rem; color: var(--text-light); }
+        .info-list { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; text-align: left; }
+        .info-list .info-item { display: flex; align-items: center; gap: 1rem; }
+        .info-list i { color: var(--primary-color); font-size: 1.5rem; width: 30px; text-align: center; }
+        .info-text label { font-size: 0.85rem; color: var(--text-light); }
+        .info-text a, .info-text span { font-size: 1rem; font-weight: 600; color: var(--text-dark); text-decoration: none; transition: color 0.2s ease; }
+        .info-text a:hover { color: var(--primary-color); }
+
+        @keyframes slideUpIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .details-card > * { opacity: 0; animation: slideUpIn 0.6s ease-out forwards; }
+        .avatar { animation-delay: 0.2s; }
+        .details-card h2 { animation-delay: 0.4s; }
+        .details-card .title { animation-delay: 0.5s; }
+        .info-list { animation-delay: 0.6s; }
+        .btn { animation-delay: 0.8s; }
+
+        /* --- NEW: "GO BACK" BUTTON STYLE --- */
+        .back-to-dashboard-btn {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .back-to-dashboard-btn:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="dashboard-body">
+
+    <!-- NEW: "GO BACK" BUTTON ADDED HERE -->
+    <!-- It uses JavaScript to go to the previous page, so it always works correctly. -->
+    <a href="javascript:history.back()" class="back-to-dashboard-btn" title="Go Back">
+        <i class="fas fa-times"></i>
+    </a>
+
+    <div class="about-page-container">
+        <!-- Left Hero Panel -->
+        <div class="about-hero-panel">
+            <h1>About the Developer</h1>
+            <p>This project was crafted with passion and dedication to create a seamless and professional placement management experience.</p>
+        </div>
+
+        <!-- Right Details Panel -->
+        <div class="about-details-panel">
+            <div class="details-card">
+                <div class="avatar">AS</div>
+                <h2>Armandeep Singh</h2>
+                <p class="title">Developer</p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="info-text">
+                            <label>Contact</label>
+                            <a href="mailto:armandeep0088@gmail.com">armandeep0088@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-university"></i>
+                        <div class="info-text">
+                            <label>Education</label>
+                            <span>CGC University</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://armandeepsingh-dev.netlify.app/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: .75rem;">
+                    <i class="fas fa-globe"></i> Visit Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
