@@ -4,16 +4,6 @@ The Campus Placement Hub is a comprehensive web-based application designed to di
 
 ---
 
-### 📸 Key Screenshots
-
-*(Suggestion: Add your own screenshots here to showcase the project visually)*
-
-| Landing Page | Admin Dashboard | Student Dashboard |
-| :---: | :---: | :---: |
-| ![Landing Page](path/to/landing_page_screenshot.png) | ![Admin Dashboard](path/to/admin_dashboard_screenshot.png) | ![Student Dashboard](path/to/student_dashboard_screenshot.png) |
-
----
-
 ## 🚀 Core Features
 
 This project features two distinct, role-based portals with a rich set of functionalities.
